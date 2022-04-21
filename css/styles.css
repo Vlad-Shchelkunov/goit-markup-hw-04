@@ -16,6 +16,7 @@ body { background: #E5E5E5;
     list-style: none;
     padding: 0;
     margin: 0;
+
 }
 /* Контейнер */
 .container {
@@ -103,6 +104,26 @@ margin-rigth:40px;
     color: var(--accent-color);
 }
 /* Контакты в шапке */
+.header-contacts.mail::before {
+    content: "";
+    background-image: url(../images/mail.svg);
+    background-size: contain;
+    align-items: center;
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+
+}
+.header-contacts.mobile::before {
+    content: "";
+    background-image: url(../images/mobile.svg);
+    background-size: contain;
+    align-items: center;
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+
+}
 .header-contacts {
     display: flex;
     margin-left: auto;
@@ -113,8 +134,8 @@ margin-rigth:40px;
     letter-spacing: 0.02em;
     text-decoration: none;
 }
-.header-contacts .item+.item {
-    margin-left: 50px;
+.header-contacts .contacts-item+.contacts-item {
+    margin-left: 30px;
 }
 .header-contacts:hover,
 .header-contacts:focus {
@@ -122,10 +143,23 @@ margin-rigth:40px;
 }
 /* Solutions / Эффективные решения */
 .solutions {
-    background-color: var(--secondary-background-color);
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+    );
+    background-image: url(../images/main-img.jpg);
+    /* если размер изображения не подходящих размеров, то дополнительно для корректирвки
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
+    background-color: #C4C4C4;
+    border: 1px solid #000000;
     text-align: center;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 480px;
+    max-width: 1600px;
     padding: 200px 0;
 }
 .solutions-title {
@@ -153,6 +187,7 @@ margin-rigth:40px;
     padding: 10px 32px;
     min-width: 200px;
     margin-top: 30px;
+    cursor: pointer;
 }
 /* Advantages / Наши преймущества (с условным заголовком) */
 .section-transparent-title{
@@ -160,27 +195,51 @@ margin-rigth:40px;
     margin-bottom: 0;
     padding-top: 94px;
     padding-bottom: 0;
-    background-color: #F5F4FA;
 }
 .transparent-title {
-margin-top: 0;
-margin-bottom: 0;
-text-align: center;
-color: rgba(0, 0, 0, 0.1);
-font-weight: 700;
-font-size: 36px;
-line-height: 1.17;
-
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.1);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
 }
 .advantages {
     display: flex;
 }
-.advantages .item {
+
+.advantages-item {
     margin-right: 30px;
+    
 }
-.advantages .item:last-child {
+.advantages-item:last-child {
     margin-right: 0;
 }
+
+.advantages-item::before {
+    display: block;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #F5F4FA;;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+}
+.advantages-item:nth-child(1):before {
+    background-image: url(../images/antenna.svg);
+}
+.advantages-item:nth-child(2):before {
+    background-image: url(../images/clock.svg);
+}
+.advantages-item:nth-child(3):before {
+    background-image: url(../images/diagram.svg);
+}
+.advantages-item:nth-child(4):before {
+    background-image: url(../images/astronaut.svg);
+}
+
 .advantages-title {
     font-weight: 700;
     font-size: 14px;
@@ -189,6 +248,7 @@ line-height: 1.17;
     margin-top: 0;
     margin-bottom: 10px;
 }
+
 .advantages-description {
     margin-top: 0;
     margin-bottom: 0;
@@ -220,8 +280,9 @@ line-height: 1.17;
 }
 .team-image {
     width: 270px;
+    margin-bottom: 30px;
 }
-.team .item {
+.team-item {
     margin-top: 0;
     margin-bottom: 0;
     margin-right: 30px;
@@ -230,8 +291,10 @@ line-height: 1.17;
                 0px 1px 1px rgba(0, 0, 0, 0.14),
                 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    text-align: center;
+
 }
-.team .item:last-child {
+.team-item:last-child {
     margin-right: 0;
 }
 .our-team {
@@ -241,14 +304,37 @@ line-height: 1.17;
     font-weight: 500;
     line-height: 1.17;
 }
+
 .team-speciality {
     margin-top: 0;
-    margin-bottom: 30px;
+    margin-bottom: 16px;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.17;
     color: var(--secondary-text-color);
 }
+.button {
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding: 0;
+    border: none;
+    color: #AFB1B8;; 
+    background-color: #ffffff;
+    width: 44px;
+    height: 44px;
+}
+.button:hover {
+    color: #ffffff;
+    background-color: #2196F3;
+    border-radius: 50%;
+}
+
+.button-icon {
+    fill: currentcolor;
+    width: 20px;
+    height: 20px;
+}
+
 
 /*Подвал*/
 footer {
@@ -308,6 +394,7 @@ address {
     border-radius: 4px;
     border-color: transparent;
     margin: 6px 22px 6px 22px;
+    cursor: pointer;
 }
 
 .button-projects:hover,
