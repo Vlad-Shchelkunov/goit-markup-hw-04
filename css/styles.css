@@ -5,6 +5,7 @@
     --accent-color: #2196F3;
     --primary-white-color: #ffffff;
     --secondary-background-color: #2F303A;
+    --primary-icon-color: #AFB1B8;
 }
 body { background: #E5E5E5;
     color: var(--primary-text-color);
@@ -31,7 +32,6 @@ body { background: #E5E5E5;
     margin-bottom: 0;
     padding-top: 94px;
     padding-bottom: 94px;
-    background-color: #F5F4FA;
 }
 /* Загаловки секций*/
 .section-title {
@@ -217,29 +217,17 @@ margin-rigth:40px;
     margin-right: 0;
 }
 
-.advantages-item::before {
-    display: block;
-    content: "";
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #F5F4FA;;
+.button-advantages {
     width: 270px;
     height: 120px;
+    border: none;
     margin-bottom: 30px;
+    padding: 0;
 }
-.advantages-item:nth-child(1):before {
-    background-image: url(../images/antenna.svg);
+.button-icon-advantages {
+    width: 70px;
+    height: 70px;
 }
-.advantages-item:nth-child(2):before {
-    background-image: url(../images/clock.svg);
-}
-.advantages-item:nth-child(3):before {
-    background-image: url(../images/diagram.svg);
-}
-.advantages-item:nth-child(4):before {
-    background-image: url(../images/astronaut.svg);
-}
-
 .advantages-title {
     font-weight: 700;
     font-size: 14px;
@@ -274,7 +262,11 @@ margin-rigth:40px;
     width: 370px;
 }
 
+
 /* Our team / Наша команда*/
+.section.teamcolor {
+    background-color: #F5F4FA;
+}
 .team {
     display: flex;
 }
@@ -313,41 +305,90 @@ margin-rigth:40px;
     line-height: 1.17;
     color: var(--secondary-text-color);
 }
-.button {
-    margin-top: 0;
-    margin-bottom: 30px;
+
+/* Кнопки social link */
+.team-social.list {
+    display: flex;
+    margin: 0 32px 30px;
+}
+.team-social-item {
+    margin-right: 10px;
+}
+.team-social-item:last-child {
+    margin-right: 0;
+}
+.button-team-social {
     padding: 0;
     border: none;
-    color: #AFB1B8;; 
-    background-color: #ffffff;
+    color: var(--primary-icon-color);
+    background: #ffffff;
     width: 44px;
     height: 44px;
 }
-.button:hover {
-    color: #ffffff;
-    background-color: #2196F3;
-    border-radius: 50%;
-}
-
-.button-icon {
+.button-team-icon-social {
     fill: currentcolor;
     width: 20px;
     height: 20px;
+    justify-content: center;
+
+}   
+.button-team-social:hover {
+    color: #ffffff;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 50%;
 }
 
+/* Regular customers / Постоянные клиенты */
+.customer {
+    display: flex;
+}
+
+.customer .item {
+    margin-right: 30px;
+}
+
+.customer .item:last-child {
+    margin-right: 0;
+}
+
+.button-customer {
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding: 0;
+    border: 1px solid var(--primary-icon-color);
+    border-radius: 4px;
+    color: var(--primary-icon-color);
+    width: 170px;
+    height: 92px;
+}
+
+.button-customer:hover {
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
+
+.button-icon-customer {
+    fill: currentcolor;
+    width: 106px;
+    height: 60px;
+}
 
 /*Подвал*/
 footer {
     background-color: var(--secondary-background-color);
-    padding-top: 60px;
-    padding-bottom: 60px;
-    
 }
-footer>.logo {
-    color: #FFFFFF;
+.footer-logo-address > .logo {
+    color: #ffffff;
 }
 address {
     margin-top: 20px;
+    margin-bottom: 0;
+}
+.address-item {
+    margin-bottom: 9px;
+}
+.address-item:last-child {
     margin-bottom: 0;
 }
 .location {
@@ -372,6 +413,60 @@ address {
 .footer-contacts:focus {
     color: var(--accent-color);
 }
+.footer {
+    display: flex;
+    flex-direction: row;
+}
+.footer-logo-address {
+    margin-top: 60px;
+    margin-bottom: 60px;
+
+}
+.footer-social
+{   margin-left: 70px;
+    margin-top: 72px;
+    margin-bottom: 100px;
+}
+.social-title {
+    margin-bottom: 20px;
+    margin-top: 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--primary-white-color);
+}
+/* Кнопки social link в подвале */
+.social.list {
+    display: flex;
+}
+.social-item {
+    margin-right: 10px;
+}
+.social-item:last-child {
+    margin-right: 0;
+}
+
+.button-social {
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    width: 44px;
+    height: 44px;
+}
+
+.button-social:hover {
+    background-color: var(--accent-color)
+}
+
+.button-icon-social {
+    fill: currentcolor;
+    width: 20px;
+    height: 20px;
+}
+
 /*Портфолио*/
 .section.project {
     background-color: #ffffff;
