@@ -104,42 +104,31 @@ margin-rigth:40px;
     color: var(--accent-color);
 }
 /* Контакты в шапке */
-.header-contacts.mail::before {
-    content: "";
-    background-image: url(../images/mail.svg);
-    background-size: contain;
-    align-items: center;
-    width: 16px;
-    height: 12px;
-    margin-right: 10px;
-
-}
-.header-contacts.mobile::before {
-    content: "";
-    background-image: url(../images/mobile.svg);
-    background-size: contain;
-    align-items: center;
-    width: 10px;
-    height: 16px;
-    margin-right: 10px;
-
-}
-.header-contacts {
+.header-address {
     display: flex;
     margin-left: auto;
-    color: var(--secondary-text-color);
+    vertical-align:middle;
+}
+.header-address .contact-item+.contact-item {
+    margin-left: 30px;
+}
+.header-contact {
     font-size: 14px;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
+    color: var(--secondary-text-color);
 }
-.header-contacts .contacts-item+.contacts-item {
-    margin-left: 30px;
-}
-.header-contacts:hover,
-.header-contacts:focus {
+.header-contact:hover,
+.header-contact:focus {
     color: var(--accent-color)
+}
+
+.contact-icon {
+    margin-right: 10px;
+    fill: currentColor; 
+    vertical-align:middle;
 }
 /* Solutions / Эффективные решения */
 .solutions {
@@ -270,11 +259,8 @@ margin-rigth:40px;
 .team {
     display: flex;
 }
-.team-image {
-    width: 270px;
-    margin-bottom: 30px;
-}
 .team-item {
+    width: 270px;
     margin-top: 0;
     margin-bottom: 0;
     margin-right: 30px;
@@ -305,39 +291,44 @@ margin-rigth:40px;
     line-height: 1.17;
     color: var(--secondary-text-color);
 }
-
-/* Кнопки social link */
+/* Кнопки social link*/
 .team-social.list {
     display: flex;
     margin: 0 32px 30px;
 }
 .team-social-item {
     margin-right: 10px;
+    width: 44px;
+    height: 44px;
+    outline: 0.5px solid red;
 }
 .team-social-item:last-child {
     margin-right: 0;
+    text-decoration: none;
+}
+.button-team-icon-social {
+    fill: currentColor;
+    width: 20px;
+    height: 20px;
+    vertical-align:middle;
 }
 .button-team-social {
     padding: 0;
     border: none;
     color: var(--primary-icon-color);
     background: #ffffff;
-    width: 44px;
-    height: 44px;
+    width: 34px;
+    height: 34px;
+    outline: 0.5px solid blue;
 }
-.button-team-icon-social {
-    fill: currentcolor;
-    width: 20px;
-    height: 20px;
-    justify-content: center;
-
-}   
 .button-team-social:hover {
     color: #ffffff;
     background-color: var(--accent-color);
     border: none;
     border-radius: 50%;
 }
+
+
 
 /* Regular customers / Постоянные клиенты */
 .customer {
