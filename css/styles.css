@@ -107,18 +107,21 @@ margin-rigth:40px;
 .header-address {
     display: flex;
     margin-left: auto;
-    vertical-align:middle;
+    align-items: center;
 }
 .header-address .contact-item+.contact-item {
     margin-left: 30px;
 }
 .header-contact {
+    display: flex;
     font-size: 14px;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
     color: var(--secondary-text-color);
+    align-items: center;
+    justify-content: center;
 }
 .header-contact:hover,
 .header-contact:focus {
@@ -197,7 +200,6 @@ margin-rigth:40px;
 .advantages {
     display: flex;
 }
-
 .advantages-item {
     margin-right: 30px;
     
@@ -225,7 +227,6 @@ margin-rigth:40px;
     margin-top: 0;
     margin-bottom: 10px;
 }
-
 .advantages-description {
     margin-top: 0;
     margin-bottom: 0;
@@ -242,7 +243,6 @@ margin-rigth:40px;
 .services .item {
     margin-right: 30px;
 }
-
 .services .item:last-child {
     margin-right: 0;
 }
@@ -250,8 +250,6 @@ margin-rigth:40px;
 .services-image {
     width: 370px;
 }
-
-
 /* Our team / Наша команда*/
 .section.teamcolor {
     background-color: #F5F4FA;
@@ -282,7 +280,6 @@ margin-rigth:40px;
     font-weight: 500;
     line-height: 1.17;
 }
-
 .team-speciality {
     margin-top: 0;
     margin-bottom: 16px;
@@ -297,29 +294,27 @@ margin-rigth:40px;
     margin: 0 32px 30px;
 }
 .team-social-item {
+    display: flex;
     margin-right: 10px;
-    width: 44px;
-    height: 44px;
-    outline: 0.5px solid red;
 }
 .team-social-item:last-child {
     margin-right: 0;
-    text-decoration: none;
+}
+.button-team-social {
+    display: flex;
+    padding: 0;
+    border: none;
+    color: var(--primary-icon-color);
+    background: #ffffff;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
 }
 .button-team-icon-social {
     fill: currentColor;
     width: 20px;
     height: 20px;
-    vertical-align:middle;
-}
-.button-team-social {
-    padding: 0;
-    border: none;
-    color: var(--primary-icon-color);
-    background: #ffffff;
-    width: 34px;
-    height: 34px;
-    outline: 0.5px solid blue;
 }
 .button-team-social:hover {
     color: #ffffff;
@@ -327,23 +322,18 @@ margin-rigth:40px;
     border: none;
     border-radius: 50%;
 }
-
-
-
 /* Regular customers / Постоянные клиенты */
 .customer {
     display: flex;
 }
-
-.customer .item {
+.customer-item {
     margin-right: 30px;
 }
-
-.customer .item:last-child {
+.customer-item:last-child {
     margin-right: 0;
 }
-
 .button-customer {
+    display: flex;
     margin-top: 0;
     margin-bottom: 30px;
     padding: 0;
@@ -352,19 +342,19 @@ margin-rigth:40px;
     color: var(--primary-icon-color);
     width: 170px;
     height: 92px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
 }
-
-.button-customer:hover {
-    color: var(--accent-color);
-    border: 1px solid var(--accent-color);
-}
-
 .button-icon-customer {
     fill: currentcolor;
     width: 106px;
     height: 60px;
 }
-
+.button-customer:hover {
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
 /*Подвал*/
 footer {
     background-color: var(--secondary-background-color);
@@ -390,7 +380,6 @@ address {
     text-decoration: none;
     font-style: normal;
 }
-
 .footer-contacts {
     color: rgba(255, 255, 255, 0.6);
     font-size: 14px;
@@ -432,13 +421,14 @@ address {
     display: flex;
 }
 .social-item {
+    display: flex;
     margin-right: 10px;
 }
 .social-item:last-child {
     margin-right: 0;
 }
-
 .button-social {
+    display: flex;
     padding: 0;
     border: none;
     border-radius: 50%;
@@ -446,18 +436,17 @@ address {
     background: rgba(255, 255, 255, 0.1);
     width: 44px;
     height: 44px;
+    align-items: center;
+    justify-content: center;
 }
-
-.button-social:hover {
-    background-color: var(--accent-color)
-}
-
 .button-icon-social {
     fill: currentcolor;
     width: 20px;
     height: 20px;
 }
-
+.button-social:hover {
+    background-color: var(--accent-color)
+}
 /*Портфолио*/
 .section.project {
     background-color: #ffffff;
@@ -470,7 +459,6 @@ address {
     margin-top: 0;
     justify-content: center;
 }
-
 .button-projects {
     color: var(--primary-text-color);
     background-color: #F5F4FA;
@@ -482,19 +470,16 @@ address {
     margin: 6px 22px 6px 22px;
     cursor: pointer;
 }
-
 .button-projects:hover,
 .button-projects:focus {
     color: var(--primary-white-color);
     background-color: var(--accent-color);
 }
-
 .button-projects.all {
     color: var(--primary-white-color);
     background-color: var(--accent-color);
 }
 /* Projects / Cписок проектов в портфолио */
-
 .projects-type {
     display: flex;
     flex-wrap: wrap;
@@ -517,7 +502,6 @@ address {
     margin-top: 0;
     margin-bottom: 20px;
 }
-
 .portfolio-projects {
     margin: 0 24px 4px 24px;
     color: var(--primary-text-color);
