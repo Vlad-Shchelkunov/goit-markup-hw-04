@@ -123,14 +123,12 @@ margin-rigth:40px;
     color: var(--secondary-text-color);
     align-items: center;
     justify-content: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 .header-contact:hover,
 .header-contact:focus {
     color: var(--accent-color)
-}
-.header-contact {
-    padding-top: 32px;
-    padding-bottom: 32px;
 }
 .contact-icon {
     margin-right: 10px;
