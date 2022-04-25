@@ -183,6 +183,20 @@ margin-rigth:40px;
     margin-top: 30px;
     cursor: pointer;
 }
+/* Hidden */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 /* Advantages / Наши преймущества (с условным заголовком) */
 .section-transparent-title{
     margin-top: 0;
@@ -191,21 +205,11 @@ margin-rigth:40px;
     padding-bottom: 0;
     background-color: #ffffff;
 }
-.transparent-title {
-    margin-top: 0;
-    margin-bottom: 0;
-    text-align: center;
-    color: rgba(0, 0, 0, 0.1);
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-}
 .advantages {
     display: flex;
 }
 .advantages-item {
     margin-right: 30px;
-    
 }
 .advantages-item:last-child {
     margin-right: 0;
