@@ -32,6 +32,7 @@ body { background: #E5E5E5;
     margin-bottom: 0;
     padding-top: 94px;
     padding-bottom: 94px;
+    background-color: #FFFFFF;
 }
 /* Загаловки секций*/
 .section-title {
@@ -127,32 +128,36 @@ margin-rigth:40px;
 .header-contact:focus {
     color: var(--accent-color)
 }
-
+.header-contact {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
 .contact-icon {
     margin-right: 10px;
     fill: currentColor; 
     vertical-align:middle;
 }
 /* Solutions / Эффективные решения */
-.solutions {
-    background-image: linear-gradient(
-        to right,
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-    );
-    background-image: url(../images/main-img.jpg);
+.solutions { 
     /* если размер изображения не подходящих размеров, то дополнительно для корректирвки
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover; */
+    background-size: cover;
+    linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4);
+     */
     background-color: #C4C4C4;
     border: 1px solid #000000;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    height: 480px;
+    height: 600px;
     max-width: 1600px;
     padding: 200px 0;
+    background-image: linear-gradient(
+        to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)),
+    url(../images/main-img.jpg);
 }
 .solutions-title {
     margin-top: 0;
@@ -187,6 +192,7 @@ margin-rigth:40px;
     margin-bottom: 0;
     padding-top: 94px;
     padding-bottom: 0;
+    background-color: #ffffff;
 }
 .transparent-title {
     margin-top: 0;
@@ -209,11 +215,15 @@ margin-rigth:40px;
 }
 
 .button-advantages {
+    background-color: #F5F4FA;
+    display: flex;
     width: 270px;
     height: 120px;
     border: none;
     margin-bottom: 30px;
     padding: 0;
+    align-items: center;
+    justify-content: center;
 }
 .button-icon-advantages {
     width: 70px;
@@ -267,8 +277,6 @@ margin-rigth:40px;
                 0px 1px 1px rgba(0, 0, 0, 0.14),
                 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-    text-align: center;
-
 }
 .team-item:last-child {
     margin-right: 0;
@@ -288,10 +296,17 @@ margin-rigth:40px;
     line-height: 1.17;
     color: var(--secondary-text-color);
 }
+.team-box {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 32px;
+    padding-right: 32px;
+    text-align: center;
+}
 /* Кнопки social link*/
 .team-social.list {
     display: flex;
-    margin: 0 32px 30px;
+
 }
 .team-social-item {
     display: flex;
@@ -334,9 +349,6 @@ margin-rigth:40px;
 }
 .button-customer {
     display: flex;
-    margin-top: 0;
-    margin-bottom: 30px;
-    padding: 0;
     border: 1px solid var(--primary-icon-color);
     border-radius: 4px;
     color: var(--primary-icon-color);
@@ -358,6 +370,7 @@ margin-rigth:40px;
 /*Подвал*/
 footer {
     background-color: var(--secondary-background-color);
+    padding: 60px,0;
 }
 .footer-logo-address > .logo {
     color: #ffffff;
@@ -393,23 +406,22 @@ address {
 .footer-contacts:focus {
     color: var(--accent-color);
 }
+.footer-main {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
 .footer {
     display: flex;
     flex-direction: row;
+    align-items: baseline;
 }
 .footer-logo-address {
-    margin-top: 60px;
-    margin-bottom: 60px;
+    padding: 0;
+    margin-right: 70px;
+}
 
-}
-.footer-social
-{   margin-left: 70px;
-    margin-top: 72px;
-    margin-bottom: 100px;
-}
 .social-title {
-    margin-bottom: 20px;
-    margin-top: 0;
+    margin: 0;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -419,6 +431,7 @@ address {
 /* Кнопки social link в подвале */
 .social.list {
     display: flex;
+    margin-top: 20px;
 }
 .social-item {
     display: flex;
